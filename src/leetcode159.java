@@ -22,6 +22,4 @@ public class leetcode159 {
     public void test(){
         System.out.println(lengthOfLongestSubstringTwoDistinct("eceba"));
     }
-
-
 }
