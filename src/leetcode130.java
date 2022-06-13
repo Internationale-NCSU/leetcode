@@ -1,9 +1,24 @@
-import javafx.util.Pair;
+
+import org.junit.Test;
 
 import java.util.LinkedList;
 import java.util.List;
 
 public class leetcode130 {
+    class Pair<K,V>{
+        K k;
+        V v;
+        public Pair(K k,V v){
+            this.k = k;
+            this.v = v;
+        }
+        public K getKey(){
+            return this.k;
+        }
+        public V getValue(){
+            return this.v;
+        }
+    }
     static final int[][] DIRECTION = new int[][]{
         {1,0},
         {-1,0},
@@ -20,7 +35,7 @@ public class leetcode130 {
             dfs(board,row+offset[0],col+offset[1]);
         }
     }
-    public static void solve(char[][] board) {
+    public void solve(char[][] board) {
         int row = board.length;
         int col = board[0].length;
         List<Pair<Integer,Integer>> border = new LinkedList<>();
@@ -53,7 +68,8 @@ public class leetcode130 {
             }
         }
     }
-    public static void main(String[] args) {
+    @Test
+    public void test() {
         char[][] board = new char[][]{
                 {'X','X','X','X'},
                 {'X','O','O','X'},

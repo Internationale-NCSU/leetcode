@@ -1,17 +1,32 @@
-import javafx.util.Pair;
+
+import org.junit.Test;
 
 import java.util.Deque;
 import java.util.LinkedList;
 import java.util.Queue;
 
 public class leetcode994 {
-    final static int[][] DIRECTION = new int[][]{
+    class Pair<K,V>{
+        K k;
+        V v;
+        public Pair(K k,V v){
+            this.k = k;
+            this.v = v;
+        }
+        public K getKey(){
+            return this.k;
+        }
+        public V getValue(){
+            return this.v;
+        }
+    }
+    final int[][] DIRECTION = new int[][]{
         {1,0},
         {0,1},
         {-1,0},
         {0,-1}
     };
-    public static int orangesRotting(int[][] grid) {
+    public int orangesRotting(int[][] grid) {
         int minutes = 0;
         int freshCount = 0;
         boolean isAccomplished = false;
@@ -58,8 +73,8 @@ public class leetcode994 {
             return -1;
         }
     }
-
-    public static void main(String[] args) {
+    @Test
+    public void test(String[] args) {
         int[][] grid = new int[][]{
                 {0,2}
         };

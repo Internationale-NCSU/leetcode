@@ -1,5 +1,3 @@
-import sun.awt.windows.WPrinterJob;
-
 import java.awt.image.BufferedImage;
 import java.io.*;
 import java.text.Normalizer;

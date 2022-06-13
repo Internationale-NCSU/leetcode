@@ -1,6 +1,5 @@
 package toolbox;
 
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
 
 public class binarySearch {
     public static int findTheNextBiggerIndex(int[] nums,int curValue){

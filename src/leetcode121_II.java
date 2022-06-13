@@ -1,4 +1,3 @@
-import com.sun.xml.internal.ws.encoding.MtomCodec;
 
 import static java.lang.Integer.MAX_VALUE;
 import static java.lang.Integer.MIN_VALUE;

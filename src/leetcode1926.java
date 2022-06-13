@@ -1,10 +1,24 @@
-import javafx.util.Pair;
+
 
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 
 public class leetcode1926 {
+    class Pair<K,V>{
+        K k;
+        V v;
+        public Pair(K k,V v){
+            this.k = k;
+            this.v = v;
+        }
+        public K getKey(){
+            return this.k;
+        }
+        public V getValue(){
+            return this.v;
+        }
+    }
     final int DIRECTION[][] = new int[][]{
             {1,0},
             {0,1},

@@ -1,9 +1,24 @@
-import javafx.util.Pair;
+
+import org.junit.Test;
 
 import java.util.*;
 
 public class leetcode692 {
-    public static List<String> topKFrequent(String[] words, int k) {
+    class Pair<K,V>{
+        K k;
+        V v;
+        public Pair(K k,V v){
+            this.k = k;
+            this.v = v;
+        }
+        public K getKey(){
+            return this.k;
+        }
+        public V getValue(){
+            return this.v;
+        }
+    }
+    public List<String> topKFrequent(String[] words, int k) {
         Map<String,Integer> map = new HashMap<>();
         for (int i = 0; i < words.length; i++) {
             map.put(words[i],map.getOrDefault(words[i],0)+1);
@@ -27,8 +42,8 @@ public class leetcode692 {
 
         return result;
     }
-
-    public static void main(String[] args) {
+    @Test
+    public void test() {
         String[] s = new String[]{"the","day","is","sunny","the","the","the","sunny","is","is"};
         System.out.println(topKFrequent(s,4));
     }

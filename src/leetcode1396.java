@@ -1,10 +1,24 @@
-import javafx.util.Pair;
+import org.junit.Test;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class leetcode1396 {
-    static class UndergroundSystem {
+    class Pair<K,V>{
+        K k;
+        V v;
+        public Pair(K k,V v){
+            this.k = k;
+            this.v = v;
+        }
+        public K getKey(){
+            return this.k;
+        }
+        public V getValue(){
+            return this.v;
+        }
+    }
+    class UndergroundSystem {
         Map<Integer, Pair<String, Integer>> checkIn;// Pair: key->station name,id->time , value: time
         Map<Pair<String,String>,Pair<Double,Integer>> averageTimeMap;
         public UndergroundSystem() {
@@ -38,8 +52,8 @@ public class leetcode1396 {
             return averageTimeMap.get(new Pair<>(startStation,endStation)).getKey()/averageTimeMap.get(new Pair<>(startStation,endStation)).getValue();
         }
     }
-
-    public static void main(String[] args) {
+    @Test
+    public void test() {
         UndergroundSystem undergroundSystem = new UndergroundSystem();
         undergroundSystem.checkIn(45,"Leyton",3);
         undergroundSystem.checkIn(32,"Paradise",8);

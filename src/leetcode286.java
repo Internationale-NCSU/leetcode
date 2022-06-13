@@ -1,8 +1,21 @@
-import javafx.util.Pair;
-
 import java.util.*;
 
 public class leetcode286 {
+    class Pair<K,V>{
+        K k;
+        V v;
+        public Pair(K k,V v){
+            this.k = k;
+            this.v = v;
+        }
+        public K getKey(){
+            return this.k;
+        }
+        public V getValue(){
+            return this.v;
+        }
+    }
+
     private final List<int[]> DIRECTION = Arrays.asList(
             new int[] {1,0},
             new int[] {0,1},
