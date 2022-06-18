@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class leetcode256 {
     public int minCost(int[][] costs) {
-        int cost = backTracking(costs,0,0,new HashMap<>());
+        int cost = backTracking(costs,0,-1,new HashMap<>());
         return cost;
     }
     int backTracking(int[][]costs, int start, int colorIndex, Map<String,Integer> costByCombination){
