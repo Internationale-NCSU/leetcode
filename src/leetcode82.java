@@ -7,29 +7,35 @@ public class leetcode82 {
         ListNode(int val, ListNode next) { this.val = val; this.next = next; }
     }
     public static ListNode deleteDuplicates(ListNode head) {
-        ListNode stl = new ListNode(-1);
-        stl.next = head;
-        ListNode first = stl;
-        ListNode second = head;
-        while(second!=null&&second.next!=null){
-            if(second.val==second.next.val){
-                while(second.next.val==second.val&&second!=null){
-                    second = second.next;
+        // sentinel
+        ListNode sentinel = new ListNode(0, head);
+
+        // predecessor = the last node
+        // before the sublist of duplicates
+        ListNode pred = sentinel;
+
+        while (head != null) {
+            // if it's a beginning of duplicates sublist
+            // skip all duplicates
+            if (head.next != null && head.val == head.next.val) {
+                // move till the end of duplicates sublist
+                while (head.next != null && head.val == head.next.val) {
+                    head = head.next;
                 }
-                first.next = second.next;
-                second = second.next;
-            }else {
-                first = second;
-                second = second.next;
+                // skip all duplicates
+                pred.next = head.next;
+                // otherwise, move predecessor
+            } else {
+                pred = pred.next;
             }
+
+            // move forward
+            head = head.next;
         }
-        return stl.next;
+        return sentinel.next;
     }
     public static void main(String[] args) {
-        ListNode l1 = new ListNode(3);
-        ListNode l2 = new ListNode(2,l1);
-        ListNode l3 = new ListNode(2,l2);
-        ListNode l4 = new ListNode(2,l3);
+        ListNode l4 = new ListNode(2);
         ListNode l5 = new ListNode(2,l4);
         ListNode l6 = new ListNode(2,l5);
         deleteDuplicates(l6);

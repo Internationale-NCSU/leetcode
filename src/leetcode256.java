@@ -1,7 +1,6 @@
 import org.junit.Test;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class leetcode256 {
     public int minCost(int[][] costs) {
@@ -12,6 +11,7 @@ public class leetcode256 {
         if(start==costs.length){
             return 0;
         }
+
         String key = keyMaker( start,colorIndex);
         if(costByCombination.containsKey(key)){
             return costByCombination.get(key);
@@ -26,6 +26,7 @@ public class leetcode256 {
         costByCombination.put(key,min);
         return min;
     }
+
     String keyMaker(int start,int colorIndex){
         return ""+start+"_"+colorIndex;
     }
