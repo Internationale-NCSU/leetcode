@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class leetcod252 {
+public class leetcode252 {
     public boolean canAttendMeetings(int[][] intervals) {
         Arrays.sort(intervals,(a,b)->{return a[0]-b[0];});
         for (int i = 0; i < intervals.length; i++) {
