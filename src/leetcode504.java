@@ -1,4 +1,4 @@
-public class leecode504 {
+public class leetcode504 {
     public static void main(String[] args) {
         Solution s = new Solution();
         System.out.println(s.convertToBase7(0));

@@ -1,8 +1,4 @@
-
-import java.util.List;
-import java.util.ListIterator;
-
-public class leetcode2 {
+public class leetcode2_AddTwoNumber {
     public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         int carryBit = 0;
         ListNode stl = new ListNode();

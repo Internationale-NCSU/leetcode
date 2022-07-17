@@ -1,4 +1,4 @@
-public class leecode415 {
+public class leetcode415 {
     public static void main(String[] args) {
         Solution s = new Solution();
         System.out.println(s.addStrings("99", "9"));

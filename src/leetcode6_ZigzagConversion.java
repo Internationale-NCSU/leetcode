@@ -2,7 +2,7 @@ import java.util.Arrays;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
-public class leetcode6 {
+public class leetcode6_ZigzagConversion {
     public static String convert(String s, int numRows) {
         if(numRows==1){
             return s;

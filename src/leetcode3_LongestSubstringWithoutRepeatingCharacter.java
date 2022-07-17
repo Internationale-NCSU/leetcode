@@ -1,7 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
 
-public class leetcode3 {
+public class leetcode3_LongestSubstringWithoutRepeatingCharacter {
     public static int lengthOfLongestSubstring(String s) {
         int maxLen = 0;
         int start = -1;

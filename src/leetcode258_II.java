@@ -1,4 +1,4 @@
-public class leecode258 {
+public class leetcode258_II {
     public static void main(String[] args) {
         Solution s = new Solution();
         System.out.println(s.addDigits(38));

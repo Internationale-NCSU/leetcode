@@ -1,4 +1,4 @@
-public class leetcode5 {
+public class leetcode5_LongestPalindromicSubstring {
     public static String longestPalindrome(String s) {
         boolean dp[][] = new boolean[s.length()][s.length()];
         if(s.length()==0) {

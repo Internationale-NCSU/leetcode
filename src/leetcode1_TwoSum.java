@@ -1,6 +1,4 @@
-import java.util.Arrays;
-
-public class leetcode1 {
+public class leetcode1_TwoSum {
     public static int[] twoSum(int[] nums, int target) {
         int first = -1,second = -1;
         for (int i = 0; i < nums.length-1; i++) {
