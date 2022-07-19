@@ -3,7 +3,7 @@ import java.util.List;
 
 import static java.lang.Integer.MAX_VALUE;
 
-public class leetcode7 {
+public class leetcode7_ReverseInteger {
     public static int reverse(int x) {
         List<Integer> list = new LinkedList<>();
         int sign = x >= 0 ? 1 : -1;

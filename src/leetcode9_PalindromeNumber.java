@@ -1,4 +1,4 @@
-public class leetcode9 {
+public class leetcode9_PalindromeNumber {
     public static boolean isPalindrome(int x) {
         if (x<0){
             return false;
