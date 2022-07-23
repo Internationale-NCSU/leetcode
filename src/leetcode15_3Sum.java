@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class leetcode15 {
+public class leetcode15_3Sum {
     public static List<List<Integer>> threeSum(int[] nums) {
         Arrays.sort(nums);
         Set<List<Integer>> set = new HashSet<>();

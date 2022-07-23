@@ -1,7 +1,7 @@
 import java.util.LinkedList;
 import java.util.List;
 
-public class leetcode17_II {
+public class leetcode17__LetterCombinationOfAPhoneNumberII {
     public static void backTracking(List<String> result,String[] mapping,String digits,int i,String path){
         if(digits.length()==0){
             return;

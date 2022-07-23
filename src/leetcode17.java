@@ -1,46 +1,42 @@
-import java.util.*;
+import org.junit.Test;
+
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
 
 public class leetcode17 {
-    public static void dfs(Deque<String> queue,String s,List<String> result,Map<String,String[]> map,int len){
-        if(s.length()==len){
-            result.add(s);
+    Map<Integer,String> board = new HashMap<>();
+    public List<String> letterCombinations(String digits) {
+        board.put(2,"abc");
+        board.put(3,"def");
+        board.put(4,"ghi");
+        board.put(5,"jkl");
+        board.put(6,"mno");
+        board.put(7,"pqrs");
+        board.put(8,"tuv");
+        board.put(9,"wxyz");
+        List<String> result = new LinkedList<>();
+        backtracking(digits,0,result,new StringBuilder());
+        return result;
+    }
+    public void backtracking(String digit, int index, List<String> result,StringBuilder path){
+        if(index==digit.length()){
+            if(path.length()==0){
+                return;
+            }
+            result.add(path.toString());
             return;
         }
-        String first = queue.removeFirst();
-        String[] characters = map.get(first);
-        for (int i = 0; i < characters.length; i++) {
-            s = s.concat(characters[i]);
-            dfs(queue,s,result,map,len);
-            s = s.substring(0,s.length()-1);
+        int num = digit.charAt(index)-'0';
+        for (int i = 0; i < board.get(num).length(); i++) {
+            path.append(board.get(num).charAt(i));
+            backtracking(digit,index+1,result,path);
+            path.delete(path.length()-1,path.length());
         }
-        queue.addFirst(first);
     }
-    public static List<String> letterCombinations(String digits) {
-
-        Map<String,String[]> map = new HashMap<>();
-        map.put("2",new String[]{"a","b","c"});
-        map.put("3",new String[]{"d","e","f"});
-        map.put("4",new String[]{"g","h","i"});
-        map.put("5",new String[]{"j","k","l"});
-        map.put("6",new String[]{"m","n","o"});
-        map.put("7",new String[]{"p","q","r","s"});
-        map.put("8",new String[]{"t","u","v"});
-        map.put("9",new String[]{"w","x","y","z"});
-        Deque<String> queue = new LinkedList<>();
-        for (int i = 0; i < digits.length(); i++) {
-            queue.addLast(String.valueOf(digits.charAt(i)));
-        }
-        String result = "";
-        List<String> results = new LinkedList<>();
-        if(digits.length()==0){
-            return results;
-        }
-        dfs(queue,result,results,map,queue.size());
-        return results;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(letterCombinations(""));
+    @Test
+    public void test(){
+        System.out.println(letterCombinations("23"));
     }
 }
-

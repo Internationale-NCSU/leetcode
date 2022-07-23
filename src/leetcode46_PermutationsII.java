@@ -5,7 +5,7 @@ import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
 
-public class leetcode46_II {
+public class leetcode46_PermutationsII {
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> result = new LinkedList<>();
         backtracking(nums,result,new LinkedList<>(),new boolean[nums.length]);

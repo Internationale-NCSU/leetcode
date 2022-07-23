@@ -1,4 +1,4 @@
-public class leetcode12_II {
+public class leetcode12_IntegerToRoman_II {
     public static String intToRoman(int num) {
         int[] value = {1,4,5,9,10,40,50,90,100,400,500,900,1000};
         String[] symbols = {"I","IV","V","IX","X","XL","L","XC","C","CD","D","CM","M"};

@@ -1,7 +1,7 @@
 import java.util.LinkedList;
 import java.util.List;
 
-public class leetcode17_III {
+public class leetcode17__LetterCombinationOfAPhoneNumberIII {
     public static void dfs(String digit, String[] numToChar, int index, StringBuilder sb,List<String> result ){
         if(sb.length()!=0&&sb.length()==digit.length()){
             result.add(sb.toString());

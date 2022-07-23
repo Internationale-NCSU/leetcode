@@ -4,13 +4,21 @@ import java.math.BigInteger;
 import java.util.*;
 
 public class leetcode2343_QueryKthSmallestTrimmedNumber {
-
+    class Pair{
+        String str;
+        int index;
+        public Pair(String str, int index) {
+            this.str = str;
+            this.index = index;
+        }
+    }
+    
     public int[] smallestTrimmedNumbers(String[] nums, int[][] queries) {
         int[] arr= new int[queries.length];
         int index = 0;
         for (int[] query : queries) {
             int result = -1;
-            PriorityQueue<Integer> pq = new PriorityQueue<>(
+            PriorityQueue<Integer> pq = new PriorityQueue<>(query[0],
                     (a,b)->{
                     if(nums[a].substring(nums[a].length()-query[1])
                             .equals(nums[b].substring(nums[b].length()-query[1]))){

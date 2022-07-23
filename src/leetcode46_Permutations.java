@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class leetcode46 {
+public class leetcode46_Permutations {
     public static List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> result = new LinkedList<>();
         Deque<Integer> deque = new LinkedList<>();
