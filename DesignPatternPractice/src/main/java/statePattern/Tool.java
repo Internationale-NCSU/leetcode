@@ -1,6 +1,6 @@
 package statePattern;
 
-public abstract class Tool {
-    public abstract void mouseDown();
-    public abstract void mouseUp();
+public interface Tool {
+    void mouseDown();
+    void mouseUp();
 }

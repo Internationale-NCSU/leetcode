@@ -1,18 +1,34 @@
 package statePattern;
 
-public class Canvas {
-    private ToolType currentTool;
+import java.util.Collections;
 
-    public ToolType getCurrentTool() {
+public class Canvas {
+    // Open Close Principle
+    // Open to extension.
+    // Close to modification.
+
+    private Tool currentTool;
+
+    public Tool getCurrentTool() {
         return currentTool;
     }
 
-    public void setCurrentTool(ToolType currentTool) {
+    public void setCurrentTool(Tool currentTool) {
         this.currentTool = currentTool;
     }
 
-    // write in this way would be hard to extend.
+    public void mouseDown(){
+        currentTool.mouseDown();
+    }
+    public void mouseUp(){
+        currentTool.mouseUp();
+    }
 
+    // write in this way would be hard to extend.
+    // we use the Abstraction characteristic in OOP
+    // to separately implement these methods.
+
+    /*
     public void mouseDown(){
         if(currentTool.equals(ToolType.SELECTION)){
             System.out.println("Selection Icon");
@@ -31,4 +47,6 @@ public class Canvas {
             System.out.println("Erase Something");
         }
     }
+    */
+
 }
