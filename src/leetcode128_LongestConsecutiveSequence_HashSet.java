@@ -1,7 +1,7 @@
 import java.util.HashSet;
 import java.util.Set;
 
-public class leetcode128 {
+public class leetcode128_LongestConsecutiveSequence_HashSet {
     public static int longestConsecutive(int[] nums) {
         Set<Integer> set = new HashSet<>();
 
@@ -21,6 +21,8 @@ public class leetcode128 {
         }
         return maxLen;
     }
+
+
 
     public static void main(String[] args) {
         int[] arr ={0,3,7,2,5,8,4,6,0,1};
