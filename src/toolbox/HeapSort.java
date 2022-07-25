@@ -2,7 +2,7 @@ package toolbox;
 
 import java.util.Arrays;
 
-public class heapSort {
+public class HeapSort {
     public void sort(int array[]) {
         //Assigning the length of array in a variable
         int size = array.length;
@@ -48,7 +48,7 @@ public class heapSort {
     public static void main(String args[]) {
         int array[] = {3,5,7,9,4,8,2};
         System.out.println("Input array is: " + Arrays.toString(array));
-        heapSort obj = new heapSort();
+        HeapSort obj = new HeapSort();
         obj.sort(array);
         System.out.println("Sorted array is : " + Arrays.toString(array));
     }

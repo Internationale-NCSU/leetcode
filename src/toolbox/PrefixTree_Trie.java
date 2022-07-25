@@ -1,6 +1,6 @@
 package toolbox;
 
-public class prefixTree_Trie {
+public class PrefixTree_Trie {
     static class Trie {
         Trie[] children;
         boolean isWord;

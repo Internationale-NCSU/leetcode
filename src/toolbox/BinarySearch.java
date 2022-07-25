@@ -1,7 +1,7 @@
 package toolbox;
 
 
-public class binarySearch {
+public class BinarySearch {
     public static int findTheNextBiggerIndex(int[] nums,int curValue){
         int left = 0,right = nums.length-1;
         int nextIndex = nums.length;
