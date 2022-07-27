@@ -1,3 +1,4 @@
+
 import org.junit.Test;
 import java.util.HashMap;
 import java.util.Map;
@@ -32,17 +33,19 @@ public class leetcode2353_DesignAFoodRatingSystem {
         }
         Map<String,PriorityQueue<Pairs<String,Integer>>> map = new HashMap<>();
         Map<String,String> foodsToCuisines = new HashMap<>();
-
+        Map<String,Pairs<String,Integer>> foodsMap = new HashMap<>();
         public FoodRatings(String[] foods, String[] cuisines, int[] ratings) {
             for (int i = 0; i < foods.length; i++) {
                 foodsToCuisines.put(foods[i],cuisines[i]);
+                Pairs<String,Integer> pair = new Pairs<>(foods[i],ratings[i]);
+                foodsMap.put(foods[i],pair);
                 if(!this.map.containsKey(cuisines[i])){
                     PriorityQueue<Pairs<String,Integer>> pq =  getPq();
-                    pq.add(new Pairs<>(foods[i],ratings[i]));
+                    pq.offer(pair);
                     map.put(cuisines[i],pq);
                 }else {
                     PriorityQueue<Pairs<String,Integer>> pq = map.get(cuisines[i]);
-                    pq.offer(new Pairs<>(foods[i],ratings[i]));
+                    pq.offer(pair);
                 }
             }
 
@@ -65,13 +68,10 @@ public class leetcode2353_DesignAFoodRatingSystem {
         public void changeRating(String food, int newRating) {
             String cuisine = foodsToCuisines.get(food);
             PriorityQueue<Pairs<String,Integer>> pq = map.get(cuisine);
-            for (Pairs<String, Integer> foodIntegerPair: pq) {
-                if(foodIntegerPair.getKey()==food){
-                    pq.remove(foodIntegerPair);
-                    pq.add(new Pairs<>(food,newRating));
-                    break;
-                }
-            }
+            pq.remove(foodsMap.get(food));
+            Pairs<String,Integer> pair = new Pairs<>(food,newRating);
+            pq.offer(pair);
+            foodsMap.put(food,pair);
         }
 
         public String highestRated(String cuisine) {
