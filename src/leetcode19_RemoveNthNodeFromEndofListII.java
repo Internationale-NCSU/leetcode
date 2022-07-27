@@ -1,4 +1,4 @@
-public class leetcode19_II {
+public class leetcode19_RemoveNthNodeFromEndofListII {
     public static ListNode removeNthFromEnd(ListNode head, int n) {
         ListNode stl = new ListNode();
         stl.next = head;

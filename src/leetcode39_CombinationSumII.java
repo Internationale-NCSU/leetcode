@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-public class leetcode39_II {
+public class leetcode39_CombinationSumII {
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
         List<List<Integer>> result = new LinkedList<>();
         backtracking(result,new ArrayList<>(),0,0,target,candidates);

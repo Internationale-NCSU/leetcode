@@ -3,7 +3,7 @@ import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
 
-public class leetcode39 {
+public class leetcode39_CombinationSum {
     public static void backtracking(int[] candidates, int target, List<List<Integer>> result, Deque<Integer> path,int curSum,int index){
         if(curSum==target){
             List<Integer> list = new LinkedList<>(path);
