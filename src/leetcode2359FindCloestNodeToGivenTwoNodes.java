@@ -9,8 +9,6 @@ public class leetcode2359FindCloestNodeToGivenTwoNodes {
         for (int i=node1, d=0; i>=0 && !vis.containsKey(i); i=edges[i]){
             vis.put(i, d++);
         }
-
-
         HashSet<Integer> vis2 = new HashSet<>();
         int res=-1, dist = 0, min=Integer.MAX_VALUE;
 
