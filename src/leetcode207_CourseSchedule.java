@@ -1,8 +1,6 @@
-import java.util.LinkedList;
-import java.util.Queue;
 import java.util.Stack;
 
-public class leetcode207 {
+public class leetcode207_CourseSchedule {
     public static boolean canFinish(int numCourses, int[][] prerequisites) {
         int[][] coursesMap = new int[numCourses][numCourses];
         for (int i = 0; i < prerequisites.length; i++) {
