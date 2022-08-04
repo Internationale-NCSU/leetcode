@@ -4,6 +4,9 @@ public class ImageStorage {
     private String compressor;
     public String filter;
 
+    // violating single responsible principle. Store and Compress in a same class.
+    // can't support new compressor and filter. Maintenance will be harder and harder.
+
     public ImageStorage(String compressor, String filter) {
         this.compressor = compressor;
         this.filter = filter;
