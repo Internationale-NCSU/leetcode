@@ -45,6 +45,6 @@ public class leetcode2375_ConstructSmallestNumberFromDIString {
     }
     @Test
     public void test(){
-        System.out.println(smallestNumber("IIIDIDDD"));
+        System.out.println(smallestNumber("D"));
     }
 }
