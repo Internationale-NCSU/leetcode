@@ -2,7 +2,7 @@ import org.junit.Test;
 
 import java.util.*;
 
-public class leetcode2385_AmountOfTimeForBinaryTreeToBeInfected {
+public class leetcode2385_AmountOfTimeForBinaryTreeToBeInfected_BFS {
     public class TreeNode {
         int val;
         TreeNode left;
