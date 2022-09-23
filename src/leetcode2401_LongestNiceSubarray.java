@@ -64,6 +64,5 @@ public class leetcode2401_LongestNiceSubarray {
     @Test
     public void test(){
         System.out.println(longestNiceSubarray(new int[]{1,3,8,48,10}));
-
     }
 }
