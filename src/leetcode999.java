@@ -1,7 +1,6 @@
 public class leetcode999 {
     public static void main(String[] args) {
         Solution s = new Solution();
-
     }
 
     static class Solution {
@@ -50,7 +49,6 @@ public class leetcode999 {
                 }
             }
             return pawn_num;
-
         }
     }
 }
