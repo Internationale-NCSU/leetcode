@@ -1,5 +1,4 @@
 import java.util.Stack;
-
 public class leetcode71 {
     public static String simplifyPath(String path) {
         StringBuilder result = new StringBuilder("");
@@ -21,7 +20,6 @@ public class leetcode71 {
         for (int i = 0; i < size; i++) {
             result = result.insert(0,"/"+stack.pop());
         }
-
         return result.toString();
     }
 

@@ -17,7 +17,7 @@ public class leetcode150 {
                         break;
                     }
                     case '-':{
-                        result = number1 - number2;
+                        result = number2 - number1;
                         break;
                     }
                     case '*':{

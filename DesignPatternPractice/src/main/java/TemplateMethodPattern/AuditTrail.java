@@ -17,7 +17,20 @@ public class AuditTrail {
      * @exception fawegfaqwergfaw
      */
 
-     
+    private class innerClassA{
+        int a;
+        int b;
+        public int add(){
+            return a+b;
+        }
+    }
+    private class innerClassB{
+        int c;
+        int d;
+        innerClassA a1;
+        innerClassA a2;
+        innerClassA a3;
+    }
     public int test(){
         return 1;
     }
